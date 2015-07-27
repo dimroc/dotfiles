@@ -5,3 +5,6 @@
 
 # added by travis gem
 [ -f "$HOME/.travis/travis.sh" ] && . "$HOME/.travis/travis.sh"
+
+# Added by direnv
+eval "$(direnv hook bash)"

@@ -8,6 +8,8 @@ export LSCOLORS=gxfxcxdxbxegedabagacad # Dark lscolor scheme
 export HISTCONTROL=ignoredups
 export EDITOR=vim
 export VISUAL=mvim
+#export PYTHONPATH=/usr/local/bin/python
+export PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
 
 # PATH
 export PATH=/usr/local/share/npm/bin/:$PATH
