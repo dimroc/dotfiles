@@ -1,6 +1,6 @@
 #!/bin/bash
 
-dotfiles=( zshrc ackrc bash_profile bash_profile_includes gitconfig gitignore gituserconfig inputrc irbrc rdebugrc gemrc )
+dotfiles=( zshrc ackrc bash_profile bash_profile_includes gitconfig gitignore gituserconfig inputrc irbrc rdebugrc gemrc agignore)
 source=$1
 
 if [ -z $source ]; then
