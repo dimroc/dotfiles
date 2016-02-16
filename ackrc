@@ -4,6 +4,7 @@
 --type-set=haml=.haml
 --type-set=markdown=.md
 --type-add=ruby=.rake,.rsel,.ru
+--type-add=go=.go
 --type-add=html=.eco,ejs
 
 --ignore-dir=.idea/
