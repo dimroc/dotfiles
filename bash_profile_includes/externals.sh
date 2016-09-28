@@ -8,3 +8,6 @@
 
 # Added by direnv
 eval "$(direnv hook bash)"
+
+# nvm
+. "$(brew --prefix nvm)/nvm.sh"

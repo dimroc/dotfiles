@@ -10,6 +10,7 @@ export EDITOR=vim
 export VISUAL=mvim
 #export PYTHONPATH=/usr/local/bin/python
 export PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
+export NVM_DIR="$HOME/.nvm"
 
 # PATH
 export PATH=/usr/local/share/npm/bin/:$PATH
@@ -18,4 +19,3 @@ export PATH=/usr/local/bin:$PATH
 export PATH=~/bin:$PATH
 export PATH=~/.composer/vendor/bin:$PATH
 export PATH=./node_modules/.bin:$PATH
-
