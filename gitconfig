@@ -16,6 +16,10 @@
   unpulled = !"PROJ_BRANCH=$(git symbolic-ref HEAD | sed 's|refs/heads/||') && git fetch && git log HEAD..origin/$PROJ_BRANCH"
   w = whatchanged
   sw = !"git reflog | grep checkout | grep -v "\\^0$" | head -n 1 | cut -d ' ' -f 6 | xargs git checkout"
+  heroku-prod-deployed-commit = !sh -c 'heroku releases -r production | grep Deploy | tr -s \" \" | cut -d \" \" -f 3 | head -n 1' -
+  remote-repo-url = !sh -c 'git config --get remote.origin.url | sed -e 's/git@//g' | sed -e 's/\\.git//g' | sed -e 's=\\:=\\/=g'' | xargs -I url echo 'https://'url
+  compare = !sh -c 'open $(git remote-repo-url)/compare/$1...$2' -
+  compare-heroku = !sh -c 'open $(git remote-repo-url)/compare/$(git heroku-prod-deployed-commit)...master' -
 [merge]
   tool = diffmerge
 [diff]
