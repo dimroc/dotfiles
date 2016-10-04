@@ -18,6 +18,7 @@
   sw = !"git reflog | grep checkout | grep -v "\\^0$" | head -n 1 | cut -d ' ' -f 6 | xargs git checkout"
   origin-repo-url = !sh -c 'git config --get remote.origin.url | sed -e 's/git@//g' | sed -e 's/\\.git//g' | sed -e 's=\\:=\\/=g'' | xargs -I url echo 'https://'url
   compare = !sh -c 'open $(git origin-repo-url)/compare/$1...$2' -
+  browse = !sh -c 'open $(git origin-repo-url)/tree/master/$1' -
   heroku-prod-deployed-commit = !sh -c 'heroku releases -r production | grep Deploy | tr -s \" \" | cut -d \" \" -f 3 | head -n 1' -
   compare-heroku = !sh -c 'open $(git origin-repo-url)/compare/$(git heroku-prod-deployed-commit)...master' -
 [merge]
