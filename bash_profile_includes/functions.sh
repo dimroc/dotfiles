@@ -13,3 +13,7 @@ set_go_workspace() {
   export GOPATH=`pwd`
   export PATH=$PATH:$GOPATH/bin
 }
+
+dockerenv() {
+  eval $(docker-machine env default)
+}

@@ -28,4 +28,3 @@ alias gitchangesspec='git st -s | cut -c 4- | ack spec | ack -v ".*(stubs|factor
 alias ag="ag -i --path-to-ignore=~/.agignore"
 alias tmigrate="rake db:migrate db:rollback && rake db:migrate db:test:prepare"
 alias rtest="ruby -Itest"
-alias dockerenv="eval $(docker-machine env default)"
