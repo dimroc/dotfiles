@@ -42,6 +42,8 @@
   remote = red
 [push]
   default = current
+[pull]
+  rebase = true
 [apply]
   whitespace = nowarn
 [branch]
