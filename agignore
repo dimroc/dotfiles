@@ -6,3 +6,4 @@ ember/dist/
 deps/
 tmp/
 log/
+assets/bundles/
