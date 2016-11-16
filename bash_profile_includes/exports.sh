@@ -11,6 +11,8 @@ export VISUAL=mvim
 #export PYTHONPATH=/usr/local/bin/python
 export PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
 export NVM_DIR="$HOME/.nvm"
+export FZF_DEFAULT_COMMAND='ag -g ""'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMAND"
 
 # PATH
 export PATH=/usr/local/share/npm/bin/:$PATH
