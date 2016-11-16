@@ -11,3 +11,6 @@ eval "$(direnv hook bash)"
 
 # nvm
 . "$(brew --prefix nvm)/nvm.sh"
+
+#fzf
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
