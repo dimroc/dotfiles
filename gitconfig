@@ -54,3 +54,5 @@
   stat = true
 [branch "*branch-name*"]
   rebase = true
+[credential]
+  helper = osxkeychain
