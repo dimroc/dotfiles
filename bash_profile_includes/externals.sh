@@ -28,3 +28,5 @@ bashcompletion='/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/com
 if [ -f `brew --prefix`/etc/bash_completion ]; then
   . `brew --prefix`/etc/bash_completion
 fi
+
+eval "$(pyenv init -)"
