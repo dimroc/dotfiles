@@ -7,3 +7,6 @@
 .ruby-gemset
 tags
 .netrwhist
+.agignore
+.byebug_history
+.mypy_cache
