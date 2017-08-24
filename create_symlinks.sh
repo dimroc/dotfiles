@@ -4,10 +4,12 @@ dotfiles=(zshrc ackrc bash_profile bash_profile_includes gitconfig gitignore git
 source=$1
 
 if [ -z $source ]; then
-  echo "Must pass the directory where the dotfiles live"
-  exit 1
+  source=`dirname "$0"`
 fi
 
+echo Using dotfiles in directory: $source
+
+cd ~
 for dotfile in "${dotfiles[@]}"; do
   rm -f ".${dotfile}"
   echo "${dotfile}"

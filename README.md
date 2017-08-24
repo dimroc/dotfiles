@@ -14,10 +14,8 @@ Please follow the instructions there for Solarized. You can continue without Sol
 1. Create soft links from your **home directory** to this repo's folder:
 
     ```
-    ~$ ./workspace/dotfiles/create_symlinks.sh ~/workspace/dotfiles
+    ~$ ./workspace/dotfiles/create_symlinks.sh # Where ./workspace/dotfiles is the location of this repo
     ```
-
-    `./workspace/dotfiles` should be the folder of this repo
 
 2. Copy `gituserconfig.template` to `gituserconfig` in the repo's folder and add your personal information.
 
