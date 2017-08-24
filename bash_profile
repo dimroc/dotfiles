@@ -5,3 +5,5 @@
 for file in ~/.bash_profile_includes/*.sh; do
   [[ -r $file ]] && source $file;
 done
+
+export PATH=./bin:$PATH # Placed in top level to force last addition

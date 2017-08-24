@@ -43,4 +43,4 @@ export PATH=~/bin:$PATH
 export PATH=~/.composer/vendor/bin:$PATH
 export PATH=./node_modules/.bin:$PATH
 export PATH="$PYENV_ROOT/bin:$PATH"
-export PATH=./bin:$PATH
+#export PATH=./bin:$PATH # Placed in top level to force last addition
