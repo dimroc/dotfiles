@@ -30,3 +30,4 @@ if [ -f `brew --prefix`/etc/bash_completion ]; then
 fi
 
 eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
