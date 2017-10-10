@@ -13,3 +13,12 @@ set_go_workspace() {
   export GOPATH=`pwd`
   export PATH=$PATH:$GOPATH/bin
 }
+
+function counting() {
+  if [ $# -gt 0 ]; then
+    cd ~/workspace/counting_company/$1
+  else
+    cd ~/workspace/counting_company
+  fi
+}
+
