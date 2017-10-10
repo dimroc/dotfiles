@@ -2,7 +2,7 @@
 /.bin
 /.bundle
 /log/*.log
-/tmp
+tmp/
 .ruby-version
 .ruby-gemset
 tags
@@ -10,3 +10,4 @@ tags
 .agignore
 .byebug_history
 .mypy_cache
+.envrc
