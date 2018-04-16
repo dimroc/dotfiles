@@ -1,6 +1,6 @@
 #!/bin/bash
 
-dotfiles=(zshrc ackrc bash_profile bash_profile_includes gitconfig gitignore gituserconfig inputrc irbrc rdebugrc gemrc agignore direnvrc)
+dotfiles=(zshrc ackrc bash_profile bash_profile_includes gitconfig gitignore gituserconfig inputrc irbrc rdebugrc gemrc agignore direnvrc tmux.conf)
 source=$1
 
 if [ -z $source ]; then
