@@ -11,3 +11,5 @@ tags
 .byebug_history
 .mypy_cache
 .envrc
+.git-together
+.python-version
