@@ -14,7 +14,7 @@ set_go_workspace() {
   export PATH=$PATH:$GOPATH/bin
 }
 
-function counting() {
+counting() {
   if [ $# -gt 0 ]; then
     cd ~/workspace/counting_company/$1
   else
@@ -22,7 +22,7 @@ function counting() {
   fi
 }
 
-function ws() {
+ws() {
   if [ $# -gt 0 ]; then
     cd ~/workspace/$1
   else
@@ -30,3 +30,19 @@ function ws() {
   fi
 }
 
+# Bash custom completion for ws() folder hopping.
+# https://askubuntu.com/a/707643/682792
+_ws () {
+  local cur
+  COMPREPLY=()
+  cur=${COMP_WORDS[COMP_CWORD]}
+  k=0
+  i="~/workspace" # the directory from where to start
+  for j in $( compgen -f "$i/$cur" ); do # loop trough the possible completions
+    [ -d "$j" ] && j="${j}/" || j="${j} " # if its a dir add a shlash, else a space
+    COMPREPLY[k++]=${j#$i/} # remove the directory prefix from the array
+  done
+  return 0
+}
+
+complete -o nospace -F _ws ws
