@@ -22,7 +22,7 @@ function counting() {
   fi
 }
 
-function workspace() {
+function ws() {
   if [ $# -gt 0 ]; then
     cd ~/workspace/$1
   else
