@@ -6,6 +6,7 @@ export GREP_OPTIONS='--color=auto'
 #export LSCOLORS=Exfxcxdxbxegedabagacad
 export LSCOLORS=gxfxcxdxbxegedabagacad # Dark lscolor scheme
 export HISTCONTROL=erasedups
+export GPG_TTY=$(tty)
 # Eternal bash history.
 # http://stackoverflow.com/questions/9457233/unlimited-bash-history
 # ---------------------
