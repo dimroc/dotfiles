@@ -14,14 +14,6 @@ set_go_workspace() {
   export PATH=$PATH:$GOPATH/bin
 }
 
-counting() {
-  if [ $# -gt 0 ]; then
-    cd ~/workspace/counting_company/$1
-  else
-    cd ~/workspace/counting_company
-  fi
-}
-
 ws() {
   if [ $# -gt 0 ]; then
     cd ~/workspace/$1
