@@ -4,7 +4,7 @@ dotfiles=(zshrc ackrc bash_profile bash_profile_includes gitconfig gitignore git
 source=$1
 
 if [ -z $source ]; then
-  source=`dirname "$0"`
+  source=$(cd `dirname $0` && pwd)
 fi
 
 echo Using dotfiles in directory: $source
