@@ -9,11 +9,6 @@ parse_git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
 
-set_go_workspace() {
-  export GOPATH=`pwd`
-  export PATH=$PATH:$GOPATH/bin
-}
-
 ws() {
   if [ $# -gt 0 ]; then
     cd ~/workspace/$1
