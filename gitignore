@@ -13,3 +13,4 @@ tags
 .envrc
 .git-together
 .python-version
+.nvmrc
