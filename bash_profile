@@ -7,3 +7,8 @@ for file in ~/.bash_profile_includes/*.sh; do
 done
 
 export PATH=./bin:$PATH # Placed in top level to force last addition
+
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+
+
+export PATH="$HOME/.cargo/bin:$PATH"
