@@ -12,6 +12,7 @@
   br = branch
   vis = !gitk --all &
   llog = log --date=local
+  alog = log --pretty=format:"%h\\ %C(yellow)%x09%ad%x09%Creset\\ %Cgreen%an%x09%Creset\\ |\\ %s"
   unpushed = !"PROJ_BRANCH=$(git symbolic-ref HEAD | sed 's|refs/heads/||') && git log origin/$PROJ_BRANCH..HEAD"
   unpulled = !"PROJ_BRANCH=$(git symbolic-ref HEAD | sed 's|refs/heads/||') && git fetch && git log HEAD..origin/$PROJ_BRANCH"
   w = whatchanged
