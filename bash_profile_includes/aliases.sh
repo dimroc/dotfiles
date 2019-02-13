@@ -2,7 +2,7 @@
 
 alias o='open'
 alias ll="ls -lAh"
-alias grep='grep -H -n'
+alias fgrep='grep -H -n'
 alias pcurl='curl --proxy localhost:8888'
 alias rmquarantine='xattr -d com.apple.quarantine'
 
