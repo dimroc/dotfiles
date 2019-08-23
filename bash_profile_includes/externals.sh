@@ -32,3 +32,6 @@ fi
 #pyenv
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+
+# brew
+source "$(brew --prefix)/etc/bash_completion"
