@@ -53,3 +53,7 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+ # added for npm-completion https://github.com/Jephuff/npm-bash-completion
+source $PATH_TO_NPM_COMPLETION/npm-completion.sh
+PATH_TO_NPM_COMPLETION="/Users/dimroc/.nvm/versions/node/v10.14.2/lib/node_modules/npm-completion"
