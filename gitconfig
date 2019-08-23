@@ -17,14 +17,17 @@
   unpulled = !"PROJ_BRANCH=$(git symbolic-ref HEAD | sed 's|refs/heads/||') && git fetch && git log HEAD..origin/$PROJ_BRANCH"
   w = whatchanged
   sw = !"git reflog | grep checkout | grep -v "\\^0$" | head -n 1 | cut -d ' ' -f 6 | xargs git checkout"
-  pr = !sh -c 'hub pull-request'
+  stprod = !sh -c 'git fetch production master && git log master...production/master'
+  pr = !sh -c 'hub pull-request -d'
+  printpr = !sh -c 'hub pr list -L 1 -f %U -h $(git rev-parse --abbrev-ref HEAD)'
+  openpr = !sh -c 'open $(hub pr list -L 1 -f %U -h $(git rev-parse --abbrev-ref HEAD))'
   origin-repo-url = !sh -c \"git config --get remote.origin.url | sed -e 's/\\.git//g'\" -
   compare = !sh -c 'open $(git origin-repo-url)/compare/$1...$2' -
   browse = !sh -c 'open $(git origin-repo-url)/tree/master/$1' -
   heroku-prod-deployed-commit = !sh -c 'heroku releases -r production | grep Deploy | tr -s \" \" | cut -d \" \" -f 3 | head -n 1' -
   compare-heroku = !sh -c 'open $(git origin-repo-url)/compare/$(git heroku-prod-deployed-commit)...master' -
 [merge]
-  tool = diffmerge
+	tool = vimdiff
 [diff]
   tool = diffmerge
 [mergetool "diffmerge"]
