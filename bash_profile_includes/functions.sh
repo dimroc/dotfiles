@@ -33,3 +33,11 @@ _ws () {
 }
 
 complete -o nospace -F _ws ws
+
+agv() {
+  if [ $# -gt 0 ]; then
+    ag $1 --vimgrep | cut -d : -f 1,2 | head -n 3 | xargs -o vim -O
+  else
+    echo "Must pass in an argument to grep (or ag) for"
+  fi
+}
